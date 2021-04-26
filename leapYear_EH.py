@@ -1,7 +1,12 @@
 #This program determines whether an inputted year is a leap year or not
-#This program does NOT use error handling
+#This program DOES use error handling
 
-year = int(input("Please enter the year (eg 20XX): "))
+while(1):
+    try:
+        year = int(input("Please enter the year (eg 20XX): "))
+        break
+    except:
+        print("Invalid input data!")
 
 if(year % 4) == 0:
     if(year % 100) == 0:
